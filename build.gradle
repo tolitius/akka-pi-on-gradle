@@ -1,0 +1,59 @@
+version = '0.1'
+
+scalaVersion = "2.9.0-1"
+akkaVersion = "1.1"
+
+allprojects {
+
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'scala'
+
+    targetCompatibility = 1.6
+	sourceCompatibility = 1.6
+
+	defaultTasks 'build'
+
+	repositories {
+        mavenRepo urls: ["http://repo2.maven.org/maven2/",
+                         "http://repository.jboss.org/nexus/content/groups/public/",
+                         "http://scala-tools.org/repo-releases/",
+                         "http://akka.io/repository"]
+	}
+}
+
+subprojects { subproject ->
+
+    // shared dependencies for all sub projects.
+	dependencies {
+
+        compile (
+            [group: 'org.scala-lang', name: 'scala-library', version: scalaVersion ],
+            [group: 'se.scalablesolutions.akka', name: 'akka-actor', version: akkaVersion ],
+            [group: 'se.scalablesolutions.akka', name: 'akka-remote', version: akkaVersion ],
+            [group: 'se.scalablesolutions.akka', name: 'akka-stm', version: akkaVersion ],
+        )
+
+        // testCompile group: 'junit', name: 'junit', version: '4.+'
+
+        // libraries needed to run the scala tools
+        scalaTools (
+            [group: 'org.scala-lang', name: 'scala-compiler', version: scalaVersion ],
+            [group: 'org.scala-lang', name: 'scala-library', version: scalaVersion ]
+        )
+	}
+
+	// more RAM makes generally keeps tests happy
+	test {
+		maxHeapSize = "1024m"
+        outputs.upToDateWhen { false }
+
+	}
+}
+
+ideaModule {
+    beforeConfigured { module ->
+        module.dependencies.clear()
+    }
+}
+
