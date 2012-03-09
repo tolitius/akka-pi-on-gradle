@@ -4,7 +4,7 @@
     <facet type="scala" name="Scala">
       <configuration>
         <option name="compilerLibraryLevel" value="Global" />
-        <option name="compilerLibraryName" value="scala-compiler-2.9.0.1" />
+        <option name="compilerLibraryName" value="scala-compiler-2.9.1 (1)" />
       </configuration>
     </facet>
   </component>
@@ -27,45 +27,162 @@
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/cache/org.scala-lang/scala-library/jars/scala-library-2.9.0-1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/com.typesafe.akka/akka-actor/2.0/jar/1316bc08e94d2d12b3f3b1f6431c29fba3f6ef35/akka-actor-2.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/cache/org.scala-lang/scala-library/sources/scala-library-2.9.0-1-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/com.typesafe.akka/akka-actor/2.0/source/493bda9257813d06663b6840c6316527092f86a0/akka-actor-2.0-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/cache/se.scalablesolutions.akka/akka-actor/jars/akka-actor-1.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/com.typesafe.akka/akka-remote/2.0/jar/73397fb26df3d578b7e277af38ee737b72f49a69/akka-remote-2.0.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/cache/se.scalablesolutions.akka/akka-actor/sources/akka-actor-1.1-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/com.typesafe.akka/akka-remote/2.0/source/975690a0b5f23837935c7f50de8bbd7b3eb3d74a/akka-remote-2.0-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/cache/se.scalablesolutions.akka/akka-remote/jars/akka-remote-1.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/org.scala-lang/scala-library/2.9.1-1/jar/40dc7767615d4a6a85102de453a91382e0d8347e/scala-library-2.9.1-1.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/cache/se.scalablesolutions.akka/akka-remote/sources/akka-remote-1.1-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/org.scala-lang/scala-library/2.9.1-1/source/ac726d89ce32ca0572ff1761c95f541c8cdb03a7/scala-library-2.9.1-1-sources.jar!/" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/.gradle/cache/se.scalablesolutions.akka/akka-stm/jars/akka-stm-1.1.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/io.netty/netty/3.3.0.Final/bundle/29e619e882456b16a5aaec25f48d4b519edf06fc/netty-3.3.0.Final.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES>
-          <root url="jar://$USER_HOME$/.gradle/cache/se.scalablesolutions.akka/akka-stm/sources/akka-stm-1.1-sources.jar!/" />
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/io.netty/netty/3.3.0.Final/source/e4c9c949f95692e9b3cbfd841d78858f70599fc2/netty-3.3.0.Final-sources.jar!/" />
         </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/com.google.protobuf/protobuf-java/2.4.1/jar/c589509ec6fd86d5d2fda37e07c08538235d3b9/protobuf-java-2.4.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/com.google.protobuf/protobuf-java/2.4.1/source/e406f69360f2a89cb4aa724ed996a1c5599af383/protobuf-java-2.4.1-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/org.apache.httpcomponents/httpcore/4.1/jar/33fc26c02f8043ab0ede19eadc8c9885386b255c/httpcore-4.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/org.apache.httpcomponents/httpcore/4.1/source/1fdf61e5ba87e0e4676c22677e0b2fe3a05c2fd8/httpcore-4.1-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/commons-logging/commons-logging/1.1.1/jar/5043bfebc3db072ed80fbd362e7caf00e885d8ae/commons-logging-1.1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/commons-logging/commons-logging/1.1.1/source/f3f156cbff0e0fb0d64bfce31a352cce4a33bc19/commons-logging-1.1.1-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/commons-codec/commons-codec/1.4/jar/4216af16d38465bbab0f3dff8efa14204f7a399a/commons-codec-1.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/commons-codec/commons-codec/1.4/source/5310da9f90e843883309e9e0bf5950faa79882a0/commons-codec-1.4-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/org.apache.httpcomponents/httpclient/4.1/jar/93cd011acb220de08b57d96106e5800d7097742b/httpclient-4.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/org.apache.httpcomponents/httpclient/4.1/source/cf2485b8a598a2a6a38f04e2645b6918e6fa11d9/httpclient-4.1-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/net.databinder/dispatch-json_2.9.1/0.8.5/jar/816cf8b5d2e9f2f441d8fa1782ad1f0ba23d8582/dispatch-json_2.9.1-0.8.5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/net.databinder/dispatch-json_2.9.1/0.8.5/source/29326116580c761af6bacbb2f2be89f9bdd4db37/dispatch-json_2.9.1-0.8.5-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/org.objenesis/objenesis/1.2/jar/bfcb0539a071a4c5a30690388903ac48c0667f2a/objenesis-1.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/org.objenesis/objenesis/1.2/source/71909ee0264af468fe26f0a2467d01bcb85f6fa9/objenesis-1.2-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/commons-io/commons-io/1.4/jar/a8762d07e76cfde2395257a5da47ba7c1dbd3dce/commons-io-1.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/commons-io/commons-io/1.4/source/48753e43ff29409fbbeadfb36186cbe27e41b179/commons-io-1.4-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/net.debasishg/sjson_2.9.1/0.15/jar/5d3be9eaba6b7a87fb0e55632bad56572c67c94b/sjson_2.9.1-0.15.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/net.debasishg/sjson_2.9.1/0.15/source/28dfadbaf5ddd675e920702e5e6a561d5983d0a0/sjson_2.9.1-0.15-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$USER_HOME$/.gradle/caches/artifacts-8/filestore/voldemort.store.compress/h2-lzf/1.0/jar/b3106806d326dba4780e310ad0f31487cd360f7/h2-lzf-1.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../unresolved dependency - com.typesafe.akka#akka-stm;2.0" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
       </library>
     </orderEntry>
   </component>

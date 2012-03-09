@@ -1,60 +1,37 @@
 package org.dotkam.pi
 
-import akka.actor.{Actor, PoisonPill}
-import Actor._
-import akka.routing.{Routing, CyclicIterator}
-import Routing._
-import akka.dispatch.Dispatchers
-
-import java.util.concurrent.CountDownLatch
+import akka.actor.{Actor, Props, ActorRef}
+import akka.routing.RoundRobinRouter
+import akka.util.duration._
 
 /**
- * <p> TODO: Document Me </p>
+ * TODO: Document Me
  * 
- * @author http://akka.io/docs/akka/1.1.2/intro/getting-started-first-scala.html#getting-started-first-scala
+ * @author http://akka.io/docs/akka/2.0/intro/getting-started-first-scala.html
  */
 
-class Master( nrOfWorkers: Int, nrOfMessages: Int, nrOfElements: Int, latch: CountDownLatch ) extends Actor {
+class Master( nrOfWorkers: Int, nrOfMessages: Int, nrOfElements: Int, listener: ActorRef )
+  extends Actor {
 
   var pi: Double = _
   var nrOfResults: Int = _
-  var start: Long = _
+  val start: Long = System.currentTimeMillis
 
-  // create the workers
-  val workers = Vector.fill( nrOfWorkers )( actorOf[Worker].start() )
-
-  // wrap them with a load-balancing router
-  val router = Routing.loadBalancerActor( CyclicIterator ( workers ) ).start()
+  val workerRouter = context.actorOf(
+    Props[Worker].withRouter(RoundRobinRouter(nrOfWorkers)), name = "workerRouter")
 
   def receive = {
-
     case Calculate =>
-
-      // schedule work
-      for ( i <- 0 until nrOfMessages ) router ! Work( i * nrOfElements, nrOfElements )
-
-      // send a PoisonPill to all workers telling them to shut down themselves
-      router ! Broadcast( PoisonPill )
-
-      // send a PoisonPill to the router, telling him to shut himself down
-      router ! PoisonPill
-
-    case Result( value ) =>
-
-      // handle result from the worker
+      for (i ← 0 until nrOfMessages) workerRouter ! Work(i * nrOfElements, nrOfElements)
+    case Result(value) =>
       pi += value
       nrOfResults += 1
-      if ( nrOfResults == nrOfMessages ) self.stop()
+      if (nrOfResults == nrOfMessages) {
+        // Send the result to the listener
+        listener ! PiApproximation(pi, duration = ( System.currentTimeMillis - start ).millis )
+        // Stops this actor and all its supervised children
+        context.stop(self)
+      }
   }
 
-  override def preStart() {
-    start = System.currentTimeMillis
-  }
-
-  override def postStop() {
-    // tell the world that the calculation is complete
-    println(
-      "\n\tPi estimate: \t\t%s\n\tCalculation time: \t%s millis".format( pi, ( System.currentTimeMillis - start ) ) )
-    latch.countDown()
-  }
 }

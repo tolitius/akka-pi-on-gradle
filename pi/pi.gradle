@@ -1,3 +1,7 @@
 version = '0.1'
 
+apply plugin: 'application'
+
+mainClassName = "org.dotkam.pi.Pi"
+
 dependencies {}
